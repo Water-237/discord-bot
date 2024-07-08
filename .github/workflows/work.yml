@@ -1,9 +1,6 @@
 name: github acitons test
 
-on:
-    push:
-        branches:
-            - githubacttion
+on: [push]
 
 jobs:
     works:
