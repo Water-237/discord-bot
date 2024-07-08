@@ -17,7 +17,7 @@ jobs:
             - name: Set up Node.js
               uses: actions/setup-node@v3  #Node.jsの設定
               with:
-                node-version: '20.15'
+                node-version: '20'
             - name: Install dependencies
               run: npm init -y & npm install discord.js
 
