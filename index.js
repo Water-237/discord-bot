@@ -27,4 +27,5 @@ const client = new Client(
     }
   });
 
-client.login(`${BOT_TOKEN}`);
+//client.login(`${BOT_TOKEN}`);
+console.log('起動成功');
