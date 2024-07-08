@@ -1,5 +1,7 @@
 const { Client, GatewayIntentBits, SnowflakeUtil } = require('discord.js');
 
+const BOT_TOKEN = process.env.BOT_TOKEN_KEY;
+
 const client = new Client(
     { intents: [
       GatewayIntentBits.Guilds,
@@ -25,4 +27,4 @@ const client = new Client(
     }
   });
 
-client.login('TOKEN');
+client.login(`${BOT_TOKEN}`);
