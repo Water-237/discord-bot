@@ -1,6 +1,9 @@
 name: github acitons test
 
-on: [push]
+on:
+    push:
+        branches:
+            - githubacttion
 
 jobs:
     works:
@@ -8,3 +11,26 @@ jobs:
         steps:
             - name: "Hello World!!"
               run: echo "Hello, World!!"
+    renderdeploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v3  #Node.jsの設定
+              with:
+                node-version: '20.15'
+            - name: Install dependencies
+              run: npm install
+
+            - name: Run script
+              run: node index.js
+
+            #- name: "Render Deploy"
+            #  uses: ttskch/render-deploy@v1.0.0
+            #  with:
+            #    api-key: ${{ secrets.RENDER_API_KEY }}
+            #    service-id: ${{ secrets.RENDER_SERVICE_ID }}
+            #    interval: 20
+            #    timeout: 300
