@@ -3,7 +3,8 @@ name: github acitons test
 on: [push]
 
 jobs:
-    deploy:
+    works:
         runs-on: ubuntu-latest
         steps:
-            - run: echo "Hello, World!!"
+            - name: "Hello World!!"
+              run: echo "Hello, World!!"
